@@ -1,12 +1,13 @@
 from conftest import driver
-from conftest import LOGIN_EMAIL_INPUT, LOGIN_PASSWORD_INPUT, LOGIN_BUTTON, PERSONAL_ACCOUNT_BUTTON
+from helpers.locators import LOGIN_EMAIL_INPUT, LOGIN_PASSWORD_INPUT, LOGIN_BUTTON, PERSONAL_ACCOUNT_BUTTON
+from helpers.constants import URL_HOME_PAGE
 import time
 
 user_email = 'filipp_aslapov_19_015@mail.ru'
 user_pass_succes_reg = 'Pass123'
 
 def test_click_through_personal_account(driver):
-    driver.get('https://stellarburgers.nomoreparties.site/')
+    driver.get(URL_HOME_PAGE)
 
     driver.find_element(*PERSONAL_ACCOUNT_BUTTON).click()
 
